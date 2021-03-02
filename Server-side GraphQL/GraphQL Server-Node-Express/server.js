@@ -1,6 +1,7 @@
 var express = require("express");
 var { graphqlHTTP } = require("express-graphql");
 var { buildSchema } = require("graphql");
+const cors = require("cors");
 
 // GraphQL Schema
 var schema = buildSchema(`
@@ -88,6 +89,10 @@ var root = {
 
 // Create an express server and a GraphQL endpoint
 var app = express();
+
+// Allow cross-origin
+app.use(cors());
+
 app.use(
   "/graphql",
   graphqlHTTP({
