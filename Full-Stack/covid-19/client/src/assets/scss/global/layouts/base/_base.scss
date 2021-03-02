@@ -1,0 +1,27 @@
+
+
+.app-base {
+  background-color: app-get($app-background-color,label4);
+  padding-left: app-get($app-layout-config, layout ,padding-left);
+  padding-top: app-get($app-layout-config, layout, padding-top);
+  // padding-right: app-get($app-layout-config, page, padding-right);
+  // padding-bottom: app-get($app-layout-config, page, padding-bottom);
+
+}
+
+
+
+// @include app-desktop {
+//   .app-portlet {
+//     margin-top: 57px;
+//     margin-left: 250px;
+//     // height: calc(100% - 114px);
+//   }
+// }
+
+// @include app-mobile {
+//   .app-portlet {
+
+//     margin-top: 20px;
+//   }
+// }

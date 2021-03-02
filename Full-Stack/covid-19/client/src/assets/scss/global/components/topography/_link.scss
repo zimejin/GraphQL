@@ -1,0 +1,13 @@
+.app-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  @include app-link-color(app-get($app-font-color, link, default), app-get($app-font-color, link, hover));
+
+}

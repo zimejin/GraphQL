@@ -1,0 +1,29 @@
+<div class="containeer">
+  <div class="app-header app-header--fixed">
+    <div class="app-header app-header--item-start" >
+      <h1 class="app-header app-title" routerLink="/">COVID-19
+        <span class="app-header app-subtitle">Graph</span>
+      </h1>
+    </div>
+    <div class="app-header app-header--item-end">
+      <div class="app-header app-header-wrapper">
+          <img src="../../../../assets/images/globe.svg" alt="#">
+        <p class="app-header app-subtitle-right">Public</p>
+      </div>
+      <div class="app-header-button">
+        <mat-icon>play_arrow</mat-icon>
+          <div cass="app-header-text">
+            Run in Postman
+          </div>
+      </div>
+      <div class="app-header-mob-button">
+        <!-- <button APPToggle [options]="toggleOptions">
+          <mat-icon> notes</mat-icon>
+        </button> -->
+        <button appToggle [options]="toggleOptions" id="app_aside_mobile_toggler">
+          <mat-icon> notes</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

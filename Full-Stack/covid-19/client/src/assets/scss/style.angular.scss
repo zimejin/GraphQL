@@ -1,0 +1,13 @@
+// global config
+@import "./config";
+
+
+// components
+@import "../scss/global/angular";
+
+
+//layout
+@import "../scss/global/layouts/header/header";
+@import "../scss/global/layouts/aside/aside";
+@import "../scss/global/layouts/base/base";
+

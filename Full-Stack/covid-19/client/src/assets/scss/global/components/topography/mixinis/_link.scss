@@ -1,0 +1,7 @@
+@mixin app-link-color($default, $hover) {
+  color: $default;
+
+ &:hover {
+   color: $hover;
+ }
+}

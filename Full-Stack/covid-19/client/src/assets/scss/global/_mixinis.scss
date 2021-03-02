@@ -1,0 +1,104 @@
+
+
+
+
+// Breakpoint mixins
+// Layout Breakpoints
+// Define the minimum and maximum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries.
+
+@mixin app-media-below($width) {
+  @media (max-width: #{app-media-breakpoint($width)}) {
+      @content;
+  }
+}
+
+@mixin app-media-above($width) {
+  @media (min-width: #{app-media-breakpoint($width) + 1px}) {
+      @content;
+  }
+}
+
+@mixin app-media-range($from, $to) {
+  @media (min-width: #{app-media-breakpoint($from) + 1px}) and (max-width: #{app-media-breakpoint($to)}) {
+      @content;
+  }
+}
+
+@mixin app-minimal-desktop {
+  @media (min-width: #{app-media-breakpoint(lg) + 1px}) and (max-width: #{app-media-breakpoint(xl)}) {
+      @content;
+  }
+}
+
+@mixin app-minimal-desktop-and-below {
+  @media (max-width: #{app-media-breakpoint(xl)}) {
+      @content;
+  }
+}
+
+@mixin app-desktop {
+  @media (min-width: #{app-media-breakpoint(lg) + 1px}) {
+      @content;
+  }
+}
+
+@mixin app-desktop-xl {
+  @media (min-width: #{app-media-breakpoint(xl) + 1px}) {
+      @content;
+  }
+}
+
+@mixin app-desktop-xxl {
+  @media (min-width: #{app-media-breakpoint(xxl) + 1px}) {
+      @content;
+  }
+}
+
+@mixin app-desktop-and-tablet {
+  @media (min-width: #{app-media-breakpoint(md) + 1px}) {
+      @content;
+  }
+}
+
+@mixin app-tablet {
+  @media (min-width: #{app-media-breakpoint(md) + 1px}) and (max-width: #{app-media-breakpoint(lg)}) {
+      @content;
+  }
+}
+
+@mixin app-tablet-and-mobile {
+  @media (max-width: #{app-media-breakpoint(lg)}) {
+      @content;
+  }
+}
+
+@mixin app-mobile {
+  @media (max-width: #{app-media-breakpoint(md)}) {
+      @content;
+  }
+}
+
+@mixin app-mobile-sm {
+  @media (max-width: #{app-media-breakpoint(sm)}) {
+      @content;
+  }
+}
+
+@mixin app-responsive-below($width) {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin app-responsive-above($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin app-responsive-range($from, $to) {
+  @media (min-width: #{$from}) and (max-width: #{$to}) {
+    @content;
+  }
+}
+

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 mt-5 p-3 bg-light">
+            <h2>Register Author</h2>
+            <div [formGroup]="authorForm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Author Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="exampleInputPassword1" formControlName="age">
+                </div>
+                <button class="btn btn-primary" (click)="addAuthor()" [disabled]="authorForm.invalid">Register
+                    Author</button>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

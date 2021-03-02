@@ -1,0 +1,70 @@
+// global config
+
+// init global functions and mixins
+
+@import "./global/init.scss";
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$app-media-breakpoints: (
+  // extra small screen / phone
+  xs: 0,
+
+  // small screen / phone
+  sm: 576px,
+
+  // medium screen / tablet
+  md: 768px,
+
+  // large screen / desktop
+  lg: 1024px,
+
+  // extra large screen / wide desktop
+  xl: 1399px
+) !default;
+
+
+$app-font-color: (
+  text: #646c9a,
+  link: (
+    default:darken(#ebedf2, 6%),
+    hover: orange
+    )
+) !default;
+
+
+// background config
+
+$app-background-color: (
+  label: #34495e,
+  label2: gray,
+  label3: white,
+  label4: darken(white, 1%)
+);
+
+
+//layout config
+
+$app-layout-config: (
+  page: (
+    padding-top: 77px,
+    padding-left: 280px,
+    padding-right: 20px,
+    padding-bottom: 40px
+  ),
+  header: (
+    height: 57px
+  ),
+  aside: (
+    width: 260px
+  ),
+  display: (
+    padding: 20px
+  ),
+  layout: (
+    padding-left: 260px,
+    padding-top:57px
+  )
+);

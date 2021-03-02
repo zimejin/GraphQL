@@ -1,0 +1,41 @@
+<div class="app-aside app-aside--fixed">
+  <div class="app-aside app-aside--wrapper">
+    <div class="app-aside-item app-aside-search">
+      <input type="text" placeholder="Quick Search" class="app-input">
+      <mat-icon class="app-search-icon">search</mat-icon>
+    </div>
+      <div class="app-aside-item app-aside--navigation">
+        <div class="app-navigation-text">
+          <a class="app-link">Filters</a>
+        </div>
+          <div class="app-navigation-text">
+            <a class="app-link" >Countries</a>
+          </div>
+          <div class="app-navigation-text">
+            <a class="app-link" >APIs</a>
+          </div>
+      </div>
+      <div class="app-aside-item app-aside--subnavigation">
+        <mat-slide-toggle color="warn"><span class="app-text-m app-text-gray">Save Responses</span></mat-slide-toggle>
+        <div>
+          <a href="#" class="app-link app-text-sm app-text-bold">Clear All</a>
+        </div>
+      </div>
+      <div class="app-aside app-aside-scroll">
+        <perfect-scrollbar  [usePSClass]="true"  style="max-width: 600px; max-height: 100vh;" [config]="config">
+          <div *ngFor="let country of countries | async">
+            <div class="app-list-scrollbar" routerLink="/world/{{country.alpha2}}">
+
+                <div class="app-list-img">
+                  <img src="https://www.countryflags.io/{{country.alpha2}}/flat/16.png">
+                </div>
+
+              <div class="app-text-c">
+                {{country.name}}
+              </div>
+            </div>
+          </div>
+        </perfect-scrollbar>
+      </div>
+    </div>
+  </div>

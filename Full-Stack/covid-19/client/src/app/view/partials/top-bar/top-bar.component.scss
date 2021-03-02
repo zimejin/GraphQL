@@ -1,0 +1,24 @@
+.app-header-chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #dfe6e9;
+  // grid-auto-rows: minmax(35px, auto);
+
+
+  .app-header-container{
+    background-color: #dfe6e9;
+    border-radius: 3%;
+    justify-self: center;
+    line-height: 10px;
+
+    .app-subheader-content {
+      justify-self: center;
+      color: lighten($color: #3498db, $amount: 4%);
+      font-weight: 500;
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+<div class="app-header-chart" *ngIf="topBarInfo">
+  <div class="app-header-container">
+    <!-- <div *ngFor="let info of topBarInfo"> -->
+
+    <!-- </div> -->
+  </div>
+  <div class="app-header-container">
+    <p>CONFIRMED CASES</p>
+    <div class="app-subheader-content">
+      {{topBarInfo.total_cases | digitPipe }}
+    </div>
+  </div>
+  <div class="app-header-container">
+    <p> RECOVERED CASES <p>
+      <div class="app-subheader-content">
+        {{topBarInfo.total_recovered | digitPipe }}
+      </div>
+  </div>
+  <div class="app-header-container">
+    <p>DEATHS</p>
+    <div class="app-subheader-content">
+      {{topBarInfo.total_deaths | digitPipe }}
+    </div>
+  </div>
+  <div class="app-header-container">
+    <p>MORTALITY RATIO </p>
+      <div class="app-subheader-content">
+
+    </div>
+  </div>
+</div>

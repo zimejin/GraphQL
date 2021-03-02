@@ -1,0 +1,196 @@
+.app-aside {
+  background-color:app-get($app-background-color,label);
+  width: app-get($app-layout-config, aside, width);
+  height:100% ;
+
+  &.app-aside--fixed {
+    position: fixed;
+    margin-top:app-get($app-layout-config, header, height);
+    top: 0;
+    right: 0;
+    left: 0;
+
+  }
+
+  .ps > .ps__rail-x,
+  .ps > .ps__rail-y {
+    opacity: 0.6;
+    background-color: app-get($app-background-color,label);
+  }
+  .ps__rail-y > .ps__thumb-y {
+    background-color: app-get($app-background-color,label);
+  }
+
+  .ps__rail-y:hover > .ps__thumb-y,
+  .ps__rail-y:focus > .ps__thumb-y,
+  .ps__rail-y.ps--clicking .ps__thumb-y {
+    width: 8px !important;
+    background-color: app-get($app-background-color,label);
+  }
+
+  .app-aside-item {
+    background-color :  darken(app-get($app-background-color,label),6%);
+    border-right: 2px solid app-get($app-background-color, label2) ;
+
+
+    &.app-aside-search {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &.app-aside--navigation {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 15px;
+      border-bottom: 1px solid app-get($app-background-color, label2);
+
+
+    }
+
+    &.app-aside--subnavigation {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 8px;
+      padding-left: 8px;
+      border-bottom: 1px solid app-get($app-background-color, label2);
+
+    }
+    &.app-aside-scroll {
+      margin-bottom: 20px;
+
+    }
+
+    .aside-icon {
+      color: app-get($app-background-color, label2);
+      font-size: 20px;
+      line-height: 15px;
+      padding-left: 33%;
+    }
+    .app-aside-link {
+      color: app-get($app-background-color, label2);
+
+    }
+  }
+}
+
+
+.app-input {
+  width: 100%;
+  border-radius: 16px;
+  height: 25px;
+  background-color: darken(app-get($app-background-color,label), 6%);
+  border: 1px solid app-get($app-background-color, label2);
+  position: relative;
+  padding-left: 30px;
+}
+.app-input:focus {
+  background-color: darken(app-get($app-background-color,label), 10%);
+  outline: none;
+  color:app-get($app-background-color, label2);
+}
+.app-search-icon {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  color:app-get($app-background-color, label2);
+  font-size: 20px;
+}
+
+
+
+.app-title {
+  font-size: 24px;
+}
+
+.box-title {
+  font-size: 20px;
+}
+
+
+.info-container {
+  padding: 12px 16px;
+
+  line-height: 24px;
+}
+
+.action-container,
+.content-container {
+  position: relative;
+  overflow: auto;
+  height: 300px;
+  min-height: 0;
+  margin: 8px 16px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.action-container {
+  padding: 16px;
+}
+
+.content-container {
+  position: relative;
+
+  min-height: 0;
+  padding: 8px;
+  margin: 12px 16px;
+  border: 1px solid #ccc;
+}
+
+.vertical-container,
+.horizontal-container {
+  min-height: 0 !important;
+}
+
+.action-button {
+  box-sizing: border-box;
+  width: calc(100% - 16px);
+  min-height: 35px;
+  padding: 4px 16px;
+  margin: 8px;
+  border: 1px solid #555;
+  border-radius: 4px;
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 14px;
+  text-align: center;
+}
+
+.app-list-scrollbar{
+
+  padding-top:20px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-auto-rows: minmax(35px, auto);
+  align-items: start;
+  cursor: pointer;
+
+  &:hover {
+    background-color:lighten(app-get($app-background-color,label), 8%);
+    transition: 0.2s all ease-in;
+  }
+  &:focus {
+    outline: none;
+    background-color:lighten(app-get($app-background-color,label), 8%);
+  }
+
+}
+
+
+@include app-mobile() {
+  .app-aside {
+
+    visibility: hidden;
+    z-index: 100;
+  }
+
+}
